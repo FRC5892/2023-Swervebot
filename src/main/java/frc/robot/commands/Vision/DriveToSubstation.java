@@ -9,6 +9,7 @@ import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Transform2d;
 import edu.wpi.first.math.geometry.Translation2d;
+import frc.robot.FieldConstants;
 import frc.robot.subsystems.Swerve;
 
 import java.util.function.Supplier;
@@ -20,21 +21,19 @@ public class DriveToSubstation extends DriveToPose {
   public static final double doubleSubstationX = FieldConstants.LoadingZone.doubleSubstationX - 0.4;
 
   /** Automatically drives to the nearest substation. */
-  // public DriveToSubstation(Swerve drive, Supplier<Boolean> useDouble) {
-  // super(
-  // drive,
-  // () -> {
-  // var nearestTarget =
-  // useDouble.get()
-  // ? AllianceFlipUtil.apply(
-  // new Pose2d(doubleSubstationX, drive.getPose().getY(), new Rotation2d()))
-  // : AllianceFlipUtil.apply(singleSubstationPose);
-  // if (drive.getRotation().minus(nearestTarget.getRotation()).getCos() < 0.0) {
-  // nearestTarget =
-  // nearestTarget.transformBy(
-  // new Transform2d(new Translation2d(), Rotation2d.fromDegrees(180.0)));
-  // }
-  // return nearestTarget;
-  // });
-  // }
+  public DriveToSubstation(Swerve drive, Supplier<Boolean> useDouble) {
+    super(
+        drive,
+        () -> {
+          var nearestTarget = useDouble.get()
+              ? AllianceFlipUtil.apply(
+                  new Pose2d(doubleSubstationX, drive.getPose().getY(), new Rotation2d()))
+              : AllianceFlipUtil.apply(singleSubstationPose);
+          if (drive.getRotation().minus(nearestTarget.getRotation()).getCos() < 0.0) {
+            nearestTarget = nearestTarget.transformBy(
+                new Transform2d(new Translation2d(), Rotation2d.fromDegrees(180.0)));
+          }
+          return nearestTarget;
+        });
+  }
 }
