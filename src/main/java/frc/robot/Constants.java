@@ -100,8 +100,8 @@ public final class Constants {
     public static final class Mod0 {
       public static final int driveMotorID = 1;
       public static final int angleMotorID = 2;
-      public static final int canCoderID = 12;
-      public static final double offsetDegree = -140.976;
+      public static final int canCoderID = 0;
+      public static final double offsetDegree = -120.244017;
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree + 45);
       public static final double conversionFactor = 0.060509807;
@@ -114,8 +114,8 @@ public final class Constants {
     public static final class Mod1 {
       public static final int driveMotorID = 7;
       public static final int angleMotorID = 8;
-      public static final int canCoderID = 11;
-      public static final double offsetDegree = 148.88671;
+      public static final int canCoderID = 3;
+      public static final double offsetDegree = 230.56;
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree - 45);
       public static final double conversionFactor = 0.060509807;
@@ -128,8 +128,8 @@ public final class Constants {
     public static final class Mod2 {
       public static final int driveMotorID = 3;
       public static final int angleMotorID = 4;
-      public static final int canCoderID = 10;
-      public static final double offsetDegree = -40.957;
+      public static final int canCoderID = 1;
+      public static final double offsetDegree = 180.5924;
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree + 45);
       public static final double conversionFactor = 0.060509807;
@@ -142,8 +142,8 @@ public final class Constants {
     public static final class Mod3 {
       public static final int driveMotorID = 5;
       public static final int angleMotorID = 6;
-      public static final int canCoderID = 9;
-      public static final double offsetDegree = 73.0371;
+      public static final int canCoderID = 2;
+      public static final double offsetDegree = -73.0371;
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree - 45);
       public static final double conversionFactor = 0.060509807;
