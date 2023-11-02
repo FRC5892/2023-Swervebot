@@ -29,7 +29,7 @@ In the periodic() method, the robot's odometry is updated, and the yaw of the ro
 
 public class Swerve extends SubsystemBase {
   // private Pigeon2 gyro;
-  private PigeonIMU gyro;
+  private Pigeon2 gyro;
 
   private SwerveDriveOdometry swerveOdometry;
   private SwerveModule[] mSwerveMods;
@@ -37,9 +37,9 @@ public class Swerve extends SubsystemBase {
   private Field2d field;
   Accelerometer accelerometer;
 
-  public Swerve(PigeonIMU gyro) {
+  public Swerve(Pigeon2 gyro2) {
     accelerometer = new BuiltInAccelerometer();
-    this.gyro = gyro;
+    this.gyro = gyro2;
     // gyro.configFactoryDefault();
     zeroGyro();
 
