@@ -1,7 +1,7 @@
 // Author: UMN Robotics Ri3d
 // Last Updated : January 2023
 
-package frc.robot.subsystems;
+package frc.robot.subsystems.Vision;
 
 import frc.robot.Constants;
 

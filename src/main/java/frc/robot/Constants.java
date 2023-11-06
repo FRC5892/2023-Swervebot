@@ -7,6 +7,7 @@ package frc.robot;
 import com.ctre.phoenix.sensors.Pigeon2;
 import com.revrobotics.CANSparkMax.IdleMode;
 
+import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Rotation3d;
 import edu.wpi.first.math.geometry.Transform3d;
@@ -160,12 +161,22 @@ public final class Constants {
   public static final class VisionConstants {
     public static final String USB_CAMERA_NAME = "photonvision";
     public static final double TRACKED_TAG_ROATION_KP = 0;
+
+
     public static final Transform3d CAMERA_TO_ROBOT = new Transform3d(new Translation3d(-0.3425, 0.0, -0.233),
         new Rotation3d());
     public static final Transform3d ROBOT_TO_CAMERA = CAMERA_TO_ROBOT.inverse();
-    public static final int TAG_TO_CHASE = 1;
-    public static double aimingSpeed;
-    public static double loopPeriodSecs;
+
+    /** Minimum target ambiguity. Targets with higher ambiguity will be discarded */
+    public static final double APRILTAG_AMBIGUITY_THRESHOLD = 0.2;
+
+    // Pose on the opposite side of the field. Use with `relativeTo` to flip a pose to the opposite alliance
+    public static final double FIELD_LENGTH_METERS = 16.54175;
+    public static final double FIELD_WIDTH_METERS = 8.0137;
+    public static final Pose2d FLIPPING_POSE = new Pose2d(
+        new Translation2d(FIELD_LENGTH_METERS, FIELD_WIDTH_METERS),
+        new Rotation2d(Math.PI));
+        
   }
 
 }
