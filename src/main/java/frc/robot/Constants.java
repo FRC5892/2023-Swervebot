@@ -35,17 +35,17 @@ public final class Constants {
     public static final boolean invertGyro = false; // Always ensure Gyro is CCW+ CW-
 
     /* Drivetrain Constants */
-    public static final double trackWidth = Units.inchesToMeters(27.5);
-    public static final double wheelBase = Units.inchesToMeters(25.5);
+    public static final double trackWidth = Units.inchesToMeters(17);
+    public static final double wheelBase = Units.inchesToMeters(15);
     public static final double wheelDiameter = Units.inchesToMeters(4.0);
     public static final double wheelCircumference = wheelDiameter * Math.PI;
 
     public static final double openLoopRamp = 2;
     public static final double closedLoopRamp = 0.0; // seem to be useless
 
-    public static final double driveGearRatio = (5.14 / 1.0); // 6.75:1 for L2
+    public static final double driveGearRatio = (6.75 / 1); // 6.75:1 for L2
 
-    public static final double angleGearRatio = (12.8 / 1.0); // 12.8:1 for all L's
+    public static final double angleGearRatio = (12.0 / 1); // 12.8:1 for all L's
 
     public static final SwerveDriveKinematics swerveKinematics = new SwerveDriveKinematics(
         new Translation2d(wheelBase / 2.0, trackWidth / 2.0),
@@ -63,7 +63,7 @@ public final class Constants {
     /* TODO: test Angle Motor PID Values (these are default, may tune if needed) */
     public static final double angleKP = 0.02;
     public static final double angleKI = 0.0;
-    public static final double angleKD = 0.000;
+    public static final double angleKD = 0.0;
     public static final double angleKFF = 0.0;
 
     /* Drive Motor PID Values */
@@ -100,8 +100,13 @@ public final class Constants {
     public static final class Mod0 {
       public static final int driveMotorID = 1;
       public static final int angleMotorID = 2;
+<<<<<<< HEAD
       public static final int canCoderID = 0;
       public static final double offsetDegree = -62.65484;
+=======
+      public static final int canCoderID = 12;
+      public static final double offsetDegree = 98.654;
+>>>>>>> d6305e4c74b5b6e80db0d836601fe95b93d92a8b
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree + 45);
       public static final double conversionFactor = 0.060509807;
@@ -114,8 +119,13 @@ public final class Constants {
     public static final class Mod1 {
       public static final int driveMotorID = 7;
       public static final int angleMotorID = 8;
+<<<<<<< HEAD
       public static final int canCoderID = 3;
       public static final double offsetDegree = 239.53;
+=======
+      public static final int canCoderID = 11;
+      public static final double offsetDegree = 6.53;
+>>>>>>> d6305e4c74b5b6e80db0d836601fe95b93d92a8b
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree - 45);
       public static final double conversionFactor = 0.060509807;
@@ -128,8 +138,13 @@ public final class Constants {
     public static final class Mod2 {
       public static final int driveMotorID = 3;
       public static final int angleMotorID = 4;
+<<<<<<< HEAD
       public static final int canCoderID = 1;
       public static final double offsetDegree = 23.8959;
+=======
+      public static final int canCoderID = 10;
+      public static final double offsetDegree = -19.8959;
+>>>>>>> d6305e4c74b5b6e80db0d836601fe95b93d92a8b
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree + 45);
       public static final double conversionFactor = 0.060509807;
@@ -142,8 +157,13 @@ public final class Constants {
     public static final class Mod3 {
       public static final int driveMotorID = 5;
       public static final int angleMotorID = 6;
+<<<<<<< HEAD
       public static final int canCoderID = 2;
       public static final double offsetDegree = 243.79689;
+=======
+      public static final int canCoderID = 9;
+      public static final double offsetDegree = 18.79689;
+>>>>>>> d6305e4c74b5b6e80db0d836601fe95b93d92a8b
       public static final Rotation2d angleOffset = Rotation2d.fromDegrees(offsetDegree);
       public static final Rotation2d balanceOffset = Rotation2d.fromDegrees(offsetDegree - 45);
       public static final double conversionFactor = 0.060509807;

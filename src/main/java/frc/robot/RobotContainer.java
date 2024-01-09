@@ -33,7 +33,7 @@ public class RobotContainer {
   public final static Joystick driver = new Joystick(0);
 
   /* Gyro Sensor */
-  private static PigeonIMU gyro = new PigeonIMU(Constants.Swerve.pigeonID);
+  private static Pigeon2 gyro = new Pigeon2(Constants.Swerve.pigeonID);
 
   /* Drive Controls */
   private static final int translationAxis = XboxController.Axis.kLeftY.value;
