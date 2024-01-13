@@ -2,8 +2,6 @@ package frc.robot.subsystems;
 
 //import com.ctre.phoenixpro.hardware.Pigeon2;
 import com.ctre.phoenix.sensors.Pigeon2;
-import com.ctre.phoenix.sensors.PigeonIMU;
-
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
@@ -28,7 +26,6 @@ In the periodic() method, the robot's odometry is updated, and the yaw of the ro
 */
 
 public class Swerve extends SubsystemBase {
-  // private Pigeon2 gyro;
   private Pigeon2 gyro;
 
   private SwerveDriveOdometry swerveOdometry;
@@ -37,9 +34,9 @@ public class Swerve extends SubsystemBase {
   private Field2d field;
   Accelerometer accelerometer;
 
-  public Swerve(Pigeon2 gyro2) {
+  public Swerve(Pigeon2 gyro) {
     accelerometer = new BuiltInAccelerometer();
-    this.gyro = gyro2;
+    this.gyro = gyro;
     // gyro.configFactoryDefault();
     zeroGyro();
 
